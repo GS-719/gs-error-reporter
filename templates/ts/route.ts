@@ -14,7 +14,9 @@ export async function POST(req: NextRequest) {
 
     /* ---------- EMAIL SUBJECT ---------- */
 
-    const subject = `🚨 [${payload.payload.type?.toUpperCase()}] ${payload.payload.message || "Unknown Error"}`;
+    const projectName = process.env.PROJECT_NAME;
+
+    const subject = `🚨 [${projectName}] [${payload.payload.type?.toUpperCase()}] ${payload.payload.message || "Unknown Error"}`;
 
     /* ---------- HTML FORMATTER ---------- */
 
@@ -23,6 +25,9 @@ export async function POST(req: NextRequest) {
       <div style="max-width:650px; margin:auto; background:white; border-radius:12px; padding:24px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
 
         <h2 style="color:#d32f2f; margin-top:0;">🚨 GS Error Reporter</h2>
+
+        <h3>📦 Project</h3>
+        <p><strong>Name:</strong> ${projectName}</p>
 
         <h3>🧠 Error Information</h3>
         <p><strong>Runtime:</strong> ${payload.payload.type}</p>
