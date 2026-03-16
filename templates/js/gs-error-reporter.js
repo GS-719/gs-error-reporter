@@ -16,7 +16,9 @@ export default async function handler(req, res) {
 
     /* ---------- EMAIL SUBJECT ---------- */
 
-    const subject = `🚨 [${payload.payload.type?.toUpperCase()}] ${payload.payload.message || "Unknown Error"}`;
+    const projectName = process.env.PROJECT_NAME;
+
+    const subject = `🚨 [${projectName}] [${payload.payload.type?.toUpperCase()}] ${payload.payload.message || "Unknown Error"}`;
 
     /* ---------- HTML FORMATTER ---------- */
 
