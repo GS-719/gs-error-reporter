@@ -1,0 +1,1 @@
+import "gs-error-reporter/server";

@@ -1,0 +1,46 @@
+{
+  "name": "gs-error-reporter",
+  "version": "1.0.0",
+  "description": "Runtime error monitoring and email reporting for Next.js",
+  "license": "ISC",
+  "author": "GS",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
+  "sideEffects": true,
+  "bin": {
+    "gs-email-reporter": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "next": ">=13",
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^7.0.9",
+    "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./server": {
+      "require": "./dist/core/server/index.js",
+      "default": "./dist/core/server/index.js"
+    }
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "inquirer": "^13.2.4",
+    "nodemailer": "^8.0.1"
+  }
+}
