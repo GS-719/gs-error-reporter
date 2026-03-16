@@ -5,7 +5,8 @@ const REQUIRED_ENV_VARS: Record<string, string> = {
     GS_REPORTER_EMAIL: "",
     GS_REPORTER_APP_PASSWORD: "",
     GS_REPORTER_RECEIVER: "",
-    BASE_URL: ""
+    BASE_URL: "",
+    PROJECT_NAME: ""
 };
 
 export function setupEnv(projectRoot: string) {
