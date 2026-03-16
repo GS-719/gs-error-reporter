@@ -10,8 +10,10 @@ export async function POST(req) {
     const payload = await req.json();
 
     /* ---------- EMAIL SUBJECT ---------- */
+    
+    const projectName = process.env.PROJECT_NAME;
 
-    const subject = `🚨 [${payload.payload.type?.toUpperCase()}] ${payload.payload.message || "Unknown Error"}`;
+    const subject = `🚨 [${projectName}] [${payload.payload.type?.toUpperCase()}] ${payload.payload.message || "Unknown Error"}`;
 
     /* ---------- HTML FORMATTER ---------- */
 
