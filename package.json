@@ -2,7 +2,7 @@
   "name": "gs-error-reporter",
   "version": "1.0.0",
   "description": "Runtime error monitoring and email reporting for Next.js",
-  "license": "ISC",
+  "license": "MIT",
   "author": "GS",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
