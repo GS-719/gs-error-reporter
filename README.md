@@ -1,6 +1,6 @@
 # GS Error Reporter
 
-A lightweight error monitoring tool for **Next.js** that captures **client-side and server-side errors** and sends detailed email reports.
+Lightweight **Next.js error monitoring** with **email alerts** for both client and server runtime errors.
 
 It supports both **App Router** and **Pages Router**, and can be quickly installed using a simple CLI setup.
 
