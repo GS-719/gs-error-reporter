@@ -13,10 +13,9 @@
 </p>
 
 <p align="center">
-  <a href="#">Documentation</a> •
-  <a href="#">Website</a> •
-  <a href="#">Examples</a> •
-  <a href="#">Report Bug</a>
+  <a href="https://gs-error-reporter.vercel.app/docs">Documentation</a> •
+  <a href="https://gs-error-reporter.vercel.app/">Website</a> •
+  <a href="https://github.com/GS-719/gs-error-reporter/issues/new">Report Bug</a>
 </p>
 
 ---
